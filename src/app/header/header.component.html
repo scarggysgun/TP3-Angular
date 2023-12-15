@@ -1,0 +1,28 @@
+<header class="site-header">
+  <div class="site-identity">
+    <a href="#"><img src="https://placehold.jp/200x200.png" [alt]="title" /></a>
+    <h1>
+      <a href="#">{{ title }}</a>
+    </h1>
+  </div>
+  <nav class="site-navigation">
+    <ul>
+      <li><a href="#">Categories</a></li>
+      <li><a href="#">Nouveautés</a></li>
+      <li><a href="#">Contactez-nous</a></li>
+      <li>
+        <a href=""
+          >Panier
+          <span
+            class="badge"
+            [ngClass]="{
+              'badge-green': cartItems.length > 0,
+              'badge-yellow': cartItems.length === 0
+            }"
+            >{{ cartItems.length }}</span
+          ></a
+        >
+      </li>
+    </ul>
+  </nav>
+</header>
